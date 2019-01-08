@@ -10,10 +10,17 @@ class WebGLBase extends Core {
         this.clock = new THREE.Clock()
     }
     init() {
+        this.resize = () => this._resize()
+        this.mousemove = e => this._mousemove(e)
+
         super.init()
         this.camera = super.createCamera()
         //this.controls = new THREE.OrbitControls(this.camera)
         super.updatePerspectiveCamera(this.camera, this.width, this.height)
+        this._initMesh()
+
+        window.addEventListener('resize', this.resize, { passive: true })
+        window.addEventListener('mousemove', this.mousemove, { passive: true })
     }
     _initMesh() {
         this.mesh = new Template()
@@ -21,8 +28,15 @@ class WebGLBase extends Core {
     }
     update() {
         super.update()
+        this.mesh.update(this.clock.getElapsedTime())
     }
-    resize() {}
+    _resize() {
+        super.resize(window.innerWidth, window.innerHeight)
+        this.mesh.resize()
+    }
+    _mousemove(e) {
+        this.mesh.mousemove(e)
+    }
 }
 
 let webglBase = new WebGLBase()

@@ -5,7 +5,7 @@
 import * as THREE from 'three'
 
 const OPTION = {
-    clearColor: 0xdeeeee,
+    clearColor: 0x000000,
     isOrthographic: false,
 }
 

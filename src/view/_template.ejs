@@ -4,26 +4,10 @@
 <% include('./const/_siteData') %>
 <%- include('./base/_header') %>
 <body>
-    <canvas id="canvas"></canvas>
-    <header role="banner">
-        ヘッダー
-        <nav role="navigation">
-            <ul>
-                <li>
-                    <a href="<%- PATH.root %>">TOP</a>
-                </li>
-                <li>
-                    <a href="<%- PATH.root + "about" %>">ABOUT</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
     <main id="main" role="main">
+        <canvas id="canvas"></canvas>
         <%- include('./pages/_' + name) %>
     </main>
-    <footer>
-        フッター
-    </footer>
     <%- include('./base/_footer') %>
 </body>
 </html>
