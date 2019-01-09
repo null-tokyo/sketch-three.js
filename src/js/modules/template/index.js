@@ -52,7 +52,6 @@ class Template extends THREE.Mesh {
         )
     }
     mousemove(e) {
-        console.log(e.pageX, e.pageY)
         this.uniforms.mouse.value = new THREE.Vector2(e.pageX, e.pageY)
     }
 }

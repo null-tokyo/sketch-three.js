@@ -2,13 +2,12 @@ uniform float time;
 uniform vec2 resolution;
 uniform vec2 mouse;
 
+#define PI 3.14159265359
+#define TWO_PI 6.28318530718
+
 @import ../../../glsl/shape/circle;
 @import ../../../glsl/util/color;
 @import ../../../glsl/util/noise;
-
-const float B = 30.0;
-
-float PI = 3.141592653589793;
 
 float atan2(in float y, in float x) {
     return x == 0.0 ? sin(y) * PI/2.0 : atan(y, x);
@@ -35,7 +34,7 @@ void main() {
     index.y += step(i, mod(_st.y, B));
   }
 
-  vec2 p = fract(st * B);
+  vec2 p = fract(_st);
 
   //色変換
   vec3 color = vec3(index.y * (1.0 / B), 0.5, 1.0);
