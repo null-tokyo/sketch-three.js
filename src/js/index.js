@@ -1,7 +1,33 @@
 import * as THREE from 'three'
 import Core from './webgl/Core'
-import Template from './modules/template/index'
-import NoiseFractal from './modules/NoiseFractal/index'
+import Grid from './modules/Grid/index'
+
+// class PostProcess extends THREE.Scene {
+//     constructor() {
+//         this.target
+//     }
+//     init(width, height) {
+//         this.target = new THREE.WebGLRenderTarget(16, 16)
+//         this.resize(width, height)
+//         this._initMesh()
+//     }
+//     _initMesh() {
+//         this.mesh = new THREE.Mesh(
+//             new THREE.Geometry(),
+//             new THREE.ShaderMaterial()
+//         )
+//     }
+//     getTexture() {
+//         return this.target.texture
+//     }
+//     render(renderer, camera) {
+//         renderer.render(this, camera, this.target)
+//     }
+//     resize(width, height) {
+//         let ratio = window.devicePixelRatio || 1
+//         this.target.setSize(width * ratio, height * ratio)
+//     }
+// }
 
 class WebGLBase extends Core {
     constructor() {
@@ -24,7 +50,7 @@ class WebGLBase extends Core {
         window.addEventListener('mousemove', this.mousemove, { passive: true })
     }
     _initMesh() {
-        this.mesh = new NoiseFractal()
+        this.mesh = new Grid()
         this.mainScene.add(this.mesh)
     }
     update() {
