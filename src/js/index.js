@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import Core from './webgl/Core'
-import Grid from './modules/Grid/index'
+import Mandara from './modules/Mandara/index'
 
 // class PostProcess extends THREE.Scene {
 //     constructor() {
@@ -50,7 +50,7 @@ class WebGLBase extends Core {
         window.addEventListener('mousemove', this.mousemove, { passive: true })
     }
     _initMesh() {
-        this.mesh = new Grid()
+        this.mesh = new Mandara()
         this.mainScene.add(this.mesh)
     }
     update() {
