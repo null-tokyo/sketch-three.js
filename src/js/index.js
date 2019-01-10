@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import Core from './webgl/Core'
 import Template from './modules/template/index'
-import Fractal from './modules/Fractal/index'
+import NoiseFractal from './modules/NoiseFractal/index'
 
 class WebGLBase extends Core {
     constructor() {
@@ -24,7 +24,7 @@ class WebGLBase extends Core {
         window.addEventListener('mousemove', this.mousemove, { passive: true })
     }
     _initMesh() {
-        this.mesh = new Fractal()
+        this.mesh = new NoiseFractal()
         this.mainScene.add(this.mesh)
     }
     update() {
