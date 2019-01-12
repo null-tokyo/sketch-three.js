@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import Core from './webgl/Core'
-import Shape from './modules/Shape/index'
+import NoiseWave from './modules/NoiseWave/index'
 
 // class PostProcess extends THREE.Scene {
 //     constructor() {
@@ -50,7 +50,7 @@ class WebGLBase extends Core {
         window.addEventListener('mousemove', this.mousemove, { passive: true })
     }
     _initMesh() {
-        this.mesh = new Shape()
+        this.mesh = new NoiseWave()
         this.mainScene.add(this.mesh)
     }
     update() {
