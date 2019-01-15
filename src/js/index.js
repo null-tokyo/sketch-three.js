@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import Core from './webgl/Core'
-import Test from './modules/Test/index'
+import Mouse2 from './modules/Mouse2/index'
 
 // class PostProcess extends THREE.Scene {
 //     constructor() {
@@ -50,7 +50,7 @@ class WebGLBase extends Core {
         window.addEventListener('mousemove', this.mousemove, { passive: true })
     }
     _initMesh() {
-        this.mesh = new Test()
+        this.mesh = new Mouse2()
         this.mainScene.add(this.mesh)
     }
     update() {
