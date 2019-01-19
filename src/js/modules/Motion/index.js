@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import vertShader from './template.vert'
 import fragShader from './template.frag'
 
-class Mouse4 extends THREE.Mesh {
+class Motion extends THREE.Mesh {
     constructor() {
         super(
             new THREE.PlaneBufferGeometry(
@@ -75,4 +75,4 @@ class Mouse4 extends THREE.Mesh {
     }
 }
 
-export default Mouse4
+export default Motion
