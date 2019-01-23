@@ -69,8 +69,8 @@ class DotFunction extends THREE.Mesh {
         let x = this.uniforms.force.value.x
         let y = this.uniforms.force.value.y
         this.uniforms.force.value = new THREE.Vector2(
-            x + (this.uniforms.mouse.value.x - x) * 0.06,
-            y + (this.uniforms.mouse.value.y - y) * 0.06
+            x + (this.uniforms.mouse.value.x - x) * 0.1,
+            y + (this.uniforms.mouse.value.y - y) * 0.1
         )
     }
 }
