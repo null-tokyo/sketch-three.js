@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import Core from './webgl/Core'
-import Test3 from './modules/Test3/index'
+import Color from './modules/Color/index'
 
 class WebGLBase extends Core {
     constructor() {
@@ -23,7 +23,7 @@ class WebGLBase extends Core {
         window.addEventListener('mousemove', this.mousemove, { passive: true })
     }
     _initMesh() {
-        this.mesh = new Test3()
+        this.mesh = new Color()
         this.mainScene.add(this.mesh)
     }
     update() {
