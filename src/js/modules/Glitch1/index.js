@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import vertShader from './template.vert'
 import fragShader from './template.frag'
 
-class Test3 extends THREE.Mesh {
+class Glitch1 extends THREE.Mesh {
     constructor() {
         super(
             new THREE.PlaneBufferGeometry(
@@ -102,4 +102,4 @@ class Test3 extends THREE.Mesh {
     }
 }
 
-export default Test3
+export default Glitch1
