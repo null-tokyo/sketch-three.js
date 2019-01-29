@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import Core from './webgl/Core'
-import Glitch2 from './modules/Glitch2/index'
+import Glitch3 from './modules/Glitch3/index'
 
 class WebGLBase extends Core {
     constructor() {
@@ -23,7 +23,7 @@ class WebGLBase extends Core {
         window.addEventListener('mousemove', this.mousemove, { passive: true })
     }
     _initMesh() {
-        this.mesh = new Glitch2()
+        this.mesh = new Glitch3()
         this.mainScene.add(this.mesh)
     }
     update() {
